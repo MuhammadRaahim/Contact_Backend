@@ -3,7 +3,8 @@ const Blog = require('../models/blog');
 
 
 const getContacts = asyncHandler(async (req, res) => {
-    const blog = await Blog.find({user_id: req.user.id});
+
+    const blog = await Blog.find();
     res.status(200).json(blog);
 })
 
